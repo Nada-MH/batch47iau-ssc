@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { Download, RefreshCcw } from 'lucide-react'
+import { Download } from 'lucide-react'
 import maleTemplateSrc from '../assets/male.png'
 import femaleDay1TemplateSrc from '../assets/female day 1.png'
 import femaleDay2TemplateSrc from '../assets/female day 2.png'
@@ -12,10 +12,9 @@ interface Props {
     gender: 'male' | 'female' | ''
     day: 'day1' | 'day2' | ''
   }
-  onReset: () => void
 }
 
-export default function CanvasGenerator({ userImage, userData, onReset }: Props) {
+export default function CanvasGenerator({ userImage, userData }: Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const [scale, setScale] = useState(1.3)
   const [offsetX, setOffsetX] = useState(0)

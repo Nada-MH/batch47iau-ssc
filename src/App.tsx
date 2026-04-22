@@ -54,7 +54,6 @@ function App() {
           <CanvasGenerator 
             userImage={userImage || ''} 
             userData={userData}
-            onReset={resetAll} 
           />
         </div>
       </div>
